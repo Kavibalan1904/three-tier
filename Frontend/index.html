@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python & HTML App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; text-align: center; }
+        input[type="text"] { padding: 10px; font-size: 16px; }
+        input[type="submit"] { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .greeting { margin-top: 20px; font-size: 20px; color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Web App</h1>
+
+    <!-- The form sends data to the '/' route using the POST method -->
+    <form action="/" method="POST">
+        <input type="text" name="username" placeholder="Enter your name" required>
+        <input type="submit" value="Greet Me!">
+    </form>
+
+    <!-- If the backend sends a greeting, display it here -->
+    {% if greeting %}
+        <p class="greeting">{{ greeting }}</p>
+    {% endif %}
+
+</body>
+</html>
