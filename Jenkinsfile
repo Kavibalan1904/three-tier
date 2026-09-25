@@ -1,5 +1,4 @@
 pipeline {  
-    agent any
     stages{
         stage ('clone') {
             steps{
@@ -19,7 +18,7 @@ pipeline {
         stage ('Build Backend') {
             steps{
                 sh '''
-                cd backend
+                cd Backend
                 docker build -t kavidevops03/threetier-backend:latest
                 '''
             }
