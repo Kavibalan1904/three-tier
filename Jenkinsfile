@@ -11,7 +11,7 @@ agent any
             steps{
                 sh '''
                 cd Frontend
-                docker build -t kavidevops03/threetier-frontend:latest
+                docker build -t kavidevops03/threetier-frontend:latest .
 
                 '''
             }
@@ -20,7 +20,7 @@ agent any
             steps{
                 sh '''
                 cd Backend
-                docker build -t kavidevops03/threetier-backend:latest
+                docker build -t kavidevops03/threetier-backend:latest .
                 '''
             }
         }
